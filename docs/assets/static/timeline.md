@@ -41,6 +41,10 @@ The book resides around analysing history from a technological advancement stand
 
 The course was completed as of today however, I await ID verification before a certificate can be issued.
 
+## 2021-01-25: Start the 'Become a DevOps expert using Terraform on Azure' course on Udemy
+
+While writing on the blog and also pursuing more automation with Terraform I came to the conclusion that I needed more understanding about `Terraform`.
+
 ## 2021-01-28: Start Azure Fundamentals (AZ-900)
 
 The course is free to enroll and can be found at https://www.microsoft.com/en-ie/training-days#azure  
