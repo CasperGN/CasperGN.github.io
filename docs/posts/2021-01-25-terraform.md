@@ -38,7 +38,7 @@ The repo will show how to deploy a single VM containing a marketplace image for 
 
 Next step will be to configure the domain. And here I'll put my trust in an old friend, `Ansible`.
 
-Laters,
+Laters,  
 CGN
 
 [Return](../)
