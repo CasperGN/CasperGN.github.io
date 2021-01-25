@@ -40,3 +40,8 @@ The book resides around analysing history from a technological advancement stand
 ## 2021-01-24: Start & complete RH066x Fundamentals of Red Hat Enterprise Linux
 
 The course was completed as of today however, I await ID verification before a certificate can be issued.
+
+## 2021-01-28: Start Azure Fundamentals (AZ-900)
+
+The course is free to enroll and can be found at https://www.microsoft.com/en-ie/training-days#azure  
+The free event also yields a free exam voucher.
