@@ -36,6 +36,64 @@ I've created the repo [here](https://github.com/CasperGN/autoinfra) and will be 
 
 The repo will show how to deploy a single VM containing a marketplace image for Active Directory 2019.
 
+The most interesting part which deviates from the Hashicorp guide is the acceptance of the Marketplace agreement
+
+```terraform
+# main.tf
+resource "azurerm_marketplace_agreement" "cloud-infrastructure-services" {
+  publisher = var.dc_settings["publisher"]
+  offer     = var.dc_settings["offer"]
+  plan      = "hourly"
+}
+```
+
+As well as the configuration of the VM resource itself
+
+```terraform
+# instance.tf
+resource "azurerm_virtual_machine" "vm" {
+  name                  = "${var.prefix}-VM"
+  location              = var.location
+  resource_group_name   = azurerm_resource_group.rg.name
+  network_interface_ids = [azurerm_network_interface.nic.id]
+  vm_size               = var.dc_settings["vm_size"]
+
+
+  storage_os_disk {
+    name          = "${var.prefix}-OsDisk"
+    caching       = "ReadWrite"
+    create_option = "FromImage"
+  }
+
+  storage_image_reference {
+    publisher = var.dc_settings["publisher"]
+    offer     = var.dc_settings["offer"]
+    sku       = var.dc_settings["sku"]
+    version   = var.dc_settings["version"]
+  }
+
+  os_profile {
+    computer_name  = "${var.prefix}-VM"
+    admin_username = var.admin_username
+    admin_password = var.admin_password
+  }
+
+  os_profile_windows_config {}
+
+  plan {
+    name = var.dc_settings["offer"]
+    publisher = var.dc_settings["publisher"]
+    product = var.dc_settings["offer"]
+  }
+}
+```
+
+Notice the `plan` block, which is required when using Marketplace items see [ref1](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine#plan) and [ref2](https://docs.microsoft.com/en-us/azure/virtual-machines/marketplace-images) for more insight. 
+
+Executing the scripts took me about 7 minutes with `vm_size = "Standard_A1_v2"` to complete.
+
+*Disclaimer*: The NSG security rules found in `network.tf` is horrible and needs to be fixed to specific port openings. This will be handled at a later stage.
+
 Next step will be to configure the domain. And here I'll put my trust in an old friend, `Ansible`.
 
 Laters,  
