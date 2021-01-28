@@ -17,7 +17,7 @@ Requested access via work.
 
 ## 2021-01-13: Introduction to Memory Analysis with Volatility
 
-![Completion](../ressources/img/memory_analysis.png) 
+![Completion](../img/memory_analysis.png) 
 
 ## 2021-01-16: Start listening to "Jytte fra Marketing er desværre gået for i dag"
 
@@ -39,11 +39,31 @@ The book resides around analysing history from a technological advancement stand
 
 ## 2021-01-24: Start & complete RH066x Fundamentals of Red Hat Enterprise Linux
 
-The course was completed as of today however, I await ID verification before a certificate can be issued.
+![Badge](../img/rh066x.png)
 
 ## 2021-01-25: Start the 'Become a DevOps expert using Terraform on Azure' course on Udemy
 
 While writing on the blog and also pursuing more automation with Terraform I came to the conclusion that I needed more understanding about `Terraform`.
+
+## 2021-01-27: LinkedIn competence quiz on Linux
+
+Score amongst top 30% to get a badge and here we are :-)
+![Badge](../img/linux-badge.png)
+
+## 2021-01-28: LinkedIn competence quiz on Bash
+
+And here I got even better than 30% ranking up on top 15%!
+![Badge](../img/bash-badge.png)
+
+## 2021-01-28: LinkedIn competence quiz on Git
+
+Another top 15%!
+![Badge](../img/git-badge.png)
+
+## 2021-01-28: LinkedIn competence quiz on Azure
+
+Another top 15%!
+![Badge](../img/azure-badge.png)
 
 ## 2021-01-28: Start Azure Fundamentals (AZ-900)
 
